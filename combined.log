@@ -1,0 +1,10 @@
+{"level":"info","message":"POST /api/comics"}
+{"level":"info","message":"GET /api/comics?page=1&limit=10&sort=title"}
+{"level":"info","message":"GET /api/comics/comicId"}
+{"level":"info","message":"GET /api/comics/670f6773309d943ce105bbc7"}
+{"level":"info","message":"PUT /api/comics/670f6773309d943ce105bbc7"}
+{"level":"info","message":"DELETE /api/comics/670f6773309d943ce105bbc7"}
+{"level":"info","message":"GET /api/comics?page=1&limit=10&sort=title"}
+{"level":"info","message":"POST /api/comics"}
+{"level":"info","message":"POST /api/comics"}
+{"level":"info","message":"GET /api/comics?page=1&limit=10&sort=title"}

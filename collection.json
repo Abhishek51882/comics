@@ -1,0 +1,163 @@
+{
+    "info": {
+      "name": "Comic Book Store API",
+      "_postman_id": "12345678-1234-1234-1234-123456789012",
+      "description": "API collection for managing comic book inventory",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Comic Book",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"title\": \"Comic Title\",\n  \"author\": \"Author Name\",\n  \"publishedDate\": \"2023-01-01\",\n  \"price\": 9.99,\n  \"discount\": 0,\n  \"pages\": 100,\n  \"condition\": \"new\",\n  \"description\": \"A great comic book\",\n  \"genre\": \"Action\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/comics",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "comics"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get All Comics",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/api/comics",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "comics"
+            ],
+            "query": [
+              {
+                "key": "page",
+                "value": "1"
+              },
+              {
+                "key": "limit",
+                "value": "10"
+              },
+              {
+                "key": "sort",
+                "value": "title"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Comic Book Details",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/api/comics/:id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "comics",
+              ":id"
+            ],
+            "variable": [
+              {
+                "key": "id",
+                "value": "comicId"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Update Comic Book",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"title\": \"Updated Comic Title\",\n  \"author\": \"Updated Author Name\",\n  \"publishedDate\": \"2023-01-01\",\n  \"price\": 12.99,\n  \"discount\": 5,\n  \"pages\": 120,\n  \"condition\": \"used\",\n  \"description\": \"An updated great comic book\",\n  \"genre\": \"Adventure\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/comics/:id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "comics",
+              ":id"
+            ],
+            "variable": [
+              {
+                "key": "id",
+                "value": "comicId"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Comic Book",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/api/comics/:id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "comics",
+              ":id"
+            ],
+            "variable": [
+              {
+                "key": "id",
+                "value": "comicId"
+              }
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
